@@ -1,1 +1,1 @@
-web: go-heroku
+web: go-getting-started
