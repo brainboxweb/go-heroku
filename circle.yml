@@ -1,6 +1,6 @@
 deployment:
   staging:
-    branch: production
+    branch: master
     commands:
       - |
         cat >~/.netrc <<EOF
