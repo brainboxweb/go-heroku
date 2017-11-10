@@ -18,7 +18,8 @@ deployment:
     - |
       cat >~/gary.txt <<EOF
       machine api.heroku.com
-        login $HEROKU_EMAIL
+        login $HEROKU_EMAIL 
+        #hello mum
       EOF
     - aws s3 sync ~/gary.txt s3://farepilot-test-bucket
 
