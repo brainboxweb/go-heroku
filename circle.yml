@@ -20,6 +20,6 @@ deployment:
       machine api.heroku.com
         login $HEROKU_EMAIL 
       EOF
-    - chmod 600 ./gary.txt
+    # - chmod 600 ./gary.txt
     - aws s3 cp ./gary.txt s3://farepilot-test-bucket
 
