@@ -17,8 +17,8 @@ deployment:
     - heroku pg:credentials:rotate --app goforfun --confirm goforfun
     - |
       cat >./gary.txt <<EOF
-      machine api.heroku.com
-        login $HEROKU_EMAIL 
+      DATABASE_URL $(heroku config:get DATABASE_URL -a goforfun)
+      HEROKU_POSTGRESQL_SILVER_URL $(heroku config:get HEROKU_POSTGRESQL_SILVER_URL -a goforfun)
       EOF
     # - chmod 600 ./gary.txt
     - aws s3 cp ./gary.txt s3://farepilot-test-bucket
